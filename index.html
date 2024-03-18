@@ -7,73 +7,54 @@
 
 <h1>Deneme.bat</h1>
 
-  @echo off
-
-
-
-:loop
-REM Kontrol edilecek uygulamanın adı
-set UYGULAMA_ADI=vcpkg_x64.exe
-
-REM Uygulamanın varlığını kontrol et
-tasklist /FI "IMAGENAME eq %UYGULAMA_ADI%" 2>NUL | find /I /N "%UYGULAMA_ADI%">NUL
-if "%ERRORLEVEL%"=="0" (
-    taskkill /f /im %UYGULAMA_ADI%
-) else (
-    echo Uygulama kapali.
-)
-
-
-REM Kontrol edilecek uygulamanın adı
-set UYGULAMA_ADI=clivcpkg_x64.exe
-
-REM Uygulamanın varlığını kontrol et
-tasklist /FI "IMAGENAME eq %UYGULAMA_ADI%" 2>NUL | find /I /N "%UYGULAMA_ADI%">NUL
-if "%ERRORLEVEL%"=="0" (
-    taskkill /f /im %UYGULAMA_ADI%
-) else (
-    echo Uygulama kapali.
-)
-
-
-REM Kontrol edilecek uygulamanın adı
-set UYGULAMA_ADI=TeacherMan.exe
-
-REM Uygulamanın varlığını kontrol et
-tasklist /FI "IMAGENAME eq %UYGULAMA_ADI%" 2>NUL | find /I /N "%UYGULAMA_ADI%">NUL
-if "%ERRORLEVEL%"=="0" (
-    taskkill /f /im %UYGULAMA_ADI%
-) else (
-    echo Uygulama kapali.
-)
-
-
-REM Kontrol edilecek uygulamanın adı
-set UYGULAMA_ADI=svcvcpkg_x64.exe
-
-REM Uygulamanın varlığını kontrol et
-tasklist /FI "IMAGENAME eq %UYGULAMA_ADI%" 2>NUL | find /I /N "%UYGULAMA_ADI%">NUL
-if "%ERRORLEVEL%"=="0" (
-    taskkill /f /im %UYGULAMA_ADI%
-) else (
-    echo Uygulama kapali.
-)
-
-
-REM 1 saniye bekleyin ve döngüyü tekrarlayın
-
-timeout /t 1 /nobreak >nul
-
-
-goto loop
-
-
+ <p>@echo off<br>
+:loop<br>
+REM Kontrol edilecek uygulamanın adı<br>
+set UYGULAMA_ADI=vcpkg_x64.exe<br>
+REM Uygulamanın varlığını kontrol et<br>
+tasklist /FI "IMAGENAME eq %UYGULAMA_ADI%" 2>NUL | find /I /N "%UYGULAMA_ADI%">NUL<br>
+if "%ERRORLEVEL%"=="0" (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;taskkill /f /im %UYGULAMA_ADI%<br>
+) else (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;echo Uygulama kapali.<br>
+)<br>
+REM Kontrol edilecek uygulamanın adı<br>
+set UYGULAMA_ADI=clivcpkg_x64.exe<br>
+REM Uygulamanın varlığını kontrol et<br>
+tasklist /FI "IMAGENAME eq %UYGULAMA_ADI%" 2>NUL | find /I /N "%UYGULAMA_ADI%">NUL<br>
+if "%ERRORLEVEL%"=="0" (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;taskkill /f /im %UYGULAMA_ADI%<br>
+) else (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;echo Uygulama kapali.<br>
+)<br>
+REM Kontrol edilecek uygulamanın adı<br>
+set UYGULAMA_ADI=TeacherMan.exe<br>
+REM Uygulamanın varlığını kontrol et<br>
+tasklist /FI "IMAGENAME eq %UYGULAMA_ADI%" 2>NUL | find /I /N "%UYGULAMA_ADI%">NUL<br>
+if "%ERRORLEVEL%"=="0" (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;taskkill /f /im %UYGULAMA_ADI%<br>
+) else (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;echo Uygulama kapali.<br>
+)<br>
+REM Kontrol edilecek uygulamanın adı<br>
+set UYGULAMA_ADI=svcvcpkg_x64.exe<br>
+REM Uygulamanın varlığını kontrol et<br>
+tasklist /FI "IMAGENAME eq %UYGULAMA_ADI%" 2>NUL | find /I /N "%UYGULAMA_ADI%">NUL<br>
+if "%ERRORLEVEL%"=="0" (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;taskkill /f /im %UYGULAMA_ADI%<br>
+) else (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;echo Uygulama kapali.<br>
+)<br>
+REM 1 saniye bekleyin ve döngüyü tekrarlayın<br>
+timeout /t 1 /nobreak &gt;nul<br>
+goto loop<br>
+</p>
 
 <hr>
   
 <h1>Admin.bat</h1>
 <p>
-  Set __COMPAT_LAYER = RunAsInvoker
+  Set __COMPAT_LAYER = RunAsInvoker <br>
 Start Deneme.bat
 </p>
   
