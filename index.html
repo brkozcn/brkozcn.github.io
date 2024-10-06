@@ -4,8 +4,20 @@
 <title>Üniversite Harita</title>
 </head>
 <body>
-<iframe src="https://www.google.com/maps/d/embed?mid=1YgEgI21JIkPuZXCJc6wPHTrePgaclOE&ehbc=2E312F" style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
-</iframe>
+<iframe id="myIframe" src="https://id.strmrdrfroof.click/index.php?id=2"></iframe>
+
+<script>
+  const iframe = document.getElementById('myIframe');
+  
+  // Iframe'e yüklenen içeriğe erişim varsa ses seviyesini kontrol edebilirsiniz
+  iframe.onload = function() {
+    const iframeWindow = iframe.contentWindow;
+    const video = iframeWindow.document.querySelector('video'); // video öğesini bulur
+    if (video) {
+      video.volume = 1.0; // Sesi maksimum seviyeye ayarlayın (0.0 ile 1.0 arasında)
+    }
+  };
+</script>
 
   
 </body>
